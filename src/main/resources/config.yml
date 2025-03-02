@@ -1,0 +1,14 @@
+sinks:
+  - sink_type: FILE
+    ts_format: "yyyy-MM-dd HH:mm:ss"
+    log_level: DEBUG
+    thread_model: MULTI
+    write_mode: ASYNC
+    file_location: "log/application.log"
+  - sink_type: DATABASE
+    ts_format: "yyyy-MM-dd HH:mm:ss"
+    log_level: WARN
+    thread_model: MULTI
+    write_mode: SYNC
+    db_host: "localhost"
+    db_port: "8082"
